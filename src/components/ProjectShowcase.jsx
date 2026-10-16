@@ -1,0 +1,4 @@
+import { projects } from '../data'
+import ProjectCard from './ProjectCard'
+import { useLanguage } from '../LanguageContext'
+export default function ProjectShowcase() { const { lang } = useLanguage(); const id = lang === 'id'; return <section className="projects scene" id="work" aria-labelledby="work-title"><div className="section-heading"><div className="section-index">01 / {id ? 'PENGALAMAN & KARYA' : 'EXPERIENCE & WORK'}</div><h2 id="work-title">{id ? 'KARYA' : 'SELECTED'}<br/><em>{id ? 'TERPILIH.' : 'WORKS.'}</em></h2><p>{id ? 'Karya yang terbentuk melalui pengalaman magang, penelitian akademik, dan pengembangan perangkat lunak.' : 'Work shaped through internship, academic research, and applied software development.'}</p></div>{projects.map(project => <ProjectCard project={project} lang={lang} key={project.id} />)}</section> }

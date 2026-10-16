@@ -1,0 +1,2 @@
+import { useEffect, useRef } from 'react'
+export default function CustomCursor() { const ref = useRef(null); useEffect(() => { if (matchMedia('(pointer: coarse)').matches) return; const move = e => { if (ref.current) ref.current.style.transform = `translate3d(${e.clientX}px,${e.clientY}px,0)` }; addEventListener('pointermove', move); return () => removeEventListener('pointermove', move) }, []); return <div className="cursor" ref={ref} aria-hidden="true"><i/></div> }

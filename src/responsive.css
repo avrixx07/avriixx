@@ -1,0 +1,163 @@
+/* Responsive system — loaded after the art-direction stylesheet. */
+html{scroll-padding-top:84px}
+.scene>*{min-width:0}
+.nav-tools{display:flex;align-items:center;gap:1.4rem}.lang-toggle{border:1px solid var(--line);background:transparent;color:var(--muted);min-height:34px;padding:0 10px;font-size:.58rem;letter-spacing:.1em;cursor:pointer}.lang-toggle b{color:var(--lime)}.lang-toggle span{margin:0 5px;color:#555}
+.hero-line,.section-heading h2,.about h2,.skills h2,.journey-title,.contact h2{overflow-wrap:normal}
+p{max-width:68ch;text-wrap:pretty}
+h1,h2,h3{text-wrap:balance}
+::selection{background:var(--lime);color:var(--bg)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--lime);outline-offset:4px}
+.button{border-radius:2px}
+.projects{background:#efefe9}
+.project-card:last-child{padding-bottom:2rem}
+
+@media (min-width:1600px){
+  .scene{padding-left:max(5vw,80px);padding-right:max(5vw,80px)}
+  .hero-bottom{max-width:1120px}
+  .project-preview{max-height:680px}
+  .about-copy{max-width:650px}
+}
+
+@media (max-width:1280px){
+  .scene{padding-left:4vw;padding-right:4vw}
+  .hero h1{font-size:10vw}
+  .hero-bottom{margin-left:15vw}
+  .section-heading{grid-template-columns:.8fr 2fr 1fr;gap:2rem}
+  .project-info{grid-template-columns:1.35fr .9fr auto}
+  .skills{gap:6vw}
+  .skills h2{font-size:6.5vw}
+  .process-step{padding:1.5rem}
+  .process-step h3{font-size:2vw}
+}
+
+@media (max-width:1024px){
+  .scene{padding:7.5rem 32px}
+  .hero{padding-top:9rem;min-height:100svh}
+  .hero h1{font-size:11.5vw}
+  .hero-bottom{margin-left:8vw;gap:4vw}
+  .hero-bottom p{max-width:390px}
+  .section-heading{grid-template-columns:1fr 2fr;align-items:end}
+  .section-heading p{grid-column:2;max-width:420px}
+  .project-preview{height:54vw}
+  .project-info{grid-template-columns:1.5fr 1fr}
+  .project-info .unavailable{grid-column:2}
+  .about{gap:5vw}
+  .about h2{font-size:7vw}
+  .skills{grid-template-columns:.85fr 1.15fr;gap:5vw}
+  .skill-pill{font-size:1rem}
+  .journey-title{font-size:5.5vw}
+  .contact h2{font-size:8vw}
+  .contact>p,.contact-actions,.contact-details{margin-left:42%}
+}
+
+@media (max-width:900px){
+  html{scroll-padding-top:74px}
+  .nav-shell{height:74px;padding:0 24px}
+  .nav-tools{margin-left:auto;margin-right:14px}.availability{display:none}
+  .nav-links{max-height:calc(100svh - 74px);overflow:auto}
+  .nav-links a{min-height:48px;display:flex;align-items:center}
+  .scene{padding:7rem 28px}
+  .hero{min-height:auto;padding-top:9rem;padding-bottom:6rem}
+  .hero h1{font-size:12vw}
+  .hero-bottom{margin:3rem 0 0;display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+  .hero-actions{align-self:end;flex-direction:column;align-items:stretch}
+  .hero-actions .button{width:100%}
+  .section-heading{display:grid;grid-template-columns:1fr;margin-bottom:4rem}
+  .section-heading h2,.section-heading p{grid-column:1}
+  .section-heading h2{font-size:11vw;margin:1.5rem 0}
+  .project-preview{height:58vw}
+  .project-info{grid-template-columns:1fr 1fr}
+  .project-info>div:first-child{grid-column:1/-1}
+  .about{grid-template-columns:1fr;padding-top:9rem;padding-bottom:9rem}
+  .about-title-wrap{max-width:760px}
+  .about h2{font-size:10vw}
+  .about-copy{max-width:680px}
+  .identity-mark{right:-5vw;top:35%}
+  .skills{grid-template-columns:1fr;gap:4rem}
+  .skills-head{position:relative;top:0}
+  .skills h2{font-size:10vw}
+  .skill-map{width:100%}
+  .process-track{grid-template-columns:1fr 1fr}
+  .process-step{min-height:280px}
+  .process-step h3{font-size:clamp(1.6rem,4vw,2.3rem)}
+  .contact>p,.contact-actions,.contact-details{margin-left:25%}
+}
+
+@media (max-width:640px){
+  html{scroll-padding-top:68px}
+  .scene{padding:5.5rem 20px}
+  .nav-shell{height:68px;padding:0 20px}
+  .nav-links{inset:68px 0 auto}
+  .lang-toggle{min-height:36px;border-radius:999px;border-color:rgba(255,255,255,.16);padding:0 12px}
+  .menu-toggle{width:42px;height:42px;padding:8px}
+  .menu-toggle svg{width:22px}
+  .hero{padding-top:7.75rem;padding-bottom:4.5rem}
+  .hero h1{font-size:10.8vw;line-height:.94;letter-spacing:-.065em}
+  .hero .line-b{padding-left:5vw}
+  .hero .line-c{font-size:11.3vw;letter-spacing:-.075em}
+  .hero-bottom{display:flex;gap:1.25rem;margin-top:2.25rem}
+  .hero-bottom p{font-size:.9rem;line-height:1.7;max-width:38ch}
+  .hero-actions{gap:9px}
+  .button{min-height:50px;padding:0 18px;letter-spacing:.09em}
+  .section-index{font-size:.6rem}
+  .section-heading{margin-bottom:3rem}
+  .section-heading h2,.about h2,.skills h2{font-size:12.5vw;line-height:.94;letter-spacing:-.06em}
+  .section-heading p{font-size:.9rem;line-height:1.65}
+  .project-card{padding:3rem 0}
+  .project-preview{height:76vw;min-height:280px}
+  .project-info{grid-template-columns:1fr;gap:1.25rem}
+  .project-info .unavailable{grid-column:1}
+  .project-tags{grid-column:1}
+  .project-info p{font-size:.9rem;line-height:1.7}
+  .browser-bar span{max-width:50%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .about{padding-top:7rem;padding-bottom:7rem}
+  .about h2 span:nth-child(2){padding-left:0}
+  .about-copy>p{font-size:1.05rem}
+  .fact{gap:.35rem}
+  .skills{padding-top:6.5rem;padding-bottom:6.5rem}
+  .skill-group{grid-template-columns:38px 1fr}
+  .skill-pill{font-size:.86rem}
+  .journey-title{font-size:10.5vw;line-height:1}
+  .process-track{grid-template-columns:1fr}
+  .process-step{min-height:220px;border-left:0;border-top:1px solid rgba(8,9,11,.25)}
+  .contact{padding-top:7rem;padding-bottom:5rem}
+  .contact h2{font-size:12vw;line-height:.96}
+  .contact h2 span:nth-child(2),.contact h2 span:last-child{padding-left:0}
+  .contact>p,.contact-actions,.contact-details{margin-left:0}
+  .contact-actions{gap:8px}
+  .contact-actions .button{flex:1 1 100%}
+  .closing{gap:1rem;padding-top:1.25rem}
+  .intro-brand{font-size:17vw}
+}
+
+@media (max-width:400px){
+  .scene{padding-left:16px;padding-right:16px}
+  .nav-shell{padding:0 16px}
+  .hero h1{font-size:10.4vw}
+  .hero .line-c{font-size:11vw}
+  .scene-label{left:16px;right:16px}
+  .hero-eyebrow{font-size:.57rem;letter-spacing:.12em}
+  .section-heading h2,.about h2,.skills h2{font-size:12.2vw}
+  .project-meta{font-size:.55rem}
+  .project-preview{height:82vw;min-height:260px;padding:5px}
+  .preview-stage{padding:9vw 5vw}
+  .project-info h3{font-size:1.25rem}
+  .skill-pill{font-size:.8rem;padding:8px 9px}
+  .journey-title{font-size:10.8vw}
+  .process-number{font-size:2.35rem}
+  .contact h2{font-size:11.5vw}
+  .contact-details{font-size:.61rem;overflow-wrap:anywhere}
+  footer{padding-left:16px;padding-right:16px}
+}
+
+@media (max-height:600px) and (orientation:landscape){
+  .hero{min-height:720px}
+  .intro-brand{font-size:14vh}
+  .intro-meta{top:70%}
+  .intro-status{bottom:5vh}
+}
+
+@media (hover:none){
+  .project-card:hover .project-preview{transform:none}
+  .button:hover,.skill-pill:hover{transform:none;translate:none}
+}
